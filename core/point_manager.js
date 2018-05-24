@@ -1,4 +1,3 @@
-
 let points = [];
 let lines = {};
 
@@ -7,32 +6,6 @@ Array.prototype.containsPoint = function (p) {
       return el.equals(p);
   }).length > 0;
 };
-
-//given a set of data, the following function initializes
-// function getPoints(set, obj = {}) {
-//     if (!Array.isArray(set))
-//         throw Error('input is not an array');
-//
-//     if (set.length === 0)
-//         return obj;
-//
-//     let firstPoint = set.shift();
-//
-//     if (firstPoint) {
-//
-//         obj = set.reduce((obj, currentPoint) => {
-//             if (currentPoint) {
-//                 fillLines(obj, firstPoint, currentPoint);
-//             }
-//             return obj;
-//         }, obj);
-//     }
-//
-//     return getPoints(set, obj);
-// }
-// points = require('./example_points');
-// lines = getPoints(points);
-// console.log(JSON.stringify(couples, null, 2));
 
 //straight line => y = mx + q where m is the slope and q is the interception
 //given two points P1 e P2, it is possibile to calculate q and m between them
@@ -82,7 +55,6 @@ function fillLines(obj, newPoint, pointInSpace) {
     !obj[key].containsPoint(newPoint) && obj[key].push(newPoint);
     !obj[key].containsPoint(pointInSpace) && obj[key].push(pointInSpace);
 }
-
 
 //++++++ public methods ++++++//
 
