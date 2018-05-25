@@ -18,7 +18,7 @@ function calculateCoefficients(p1, p2) {
     if (p1.x === p2.x) {
         //vertical lines have the same x, no matter what y is
         //setting infinity as placeholder
-        ret.m = 0;
+        ret.m = p1.x;
         ret.q = Infinity;
     } else {
         ret.m = (p1.y - p2.y) / (p1.x - p2.x);
